@@ -1,7 +1,12 @@
 aid: qwikcilver
 name: QwikCilver
-description: 'QwikCilver is a company surfaced as a portfolio company of accel and added to the API Evangelist
-  network as a stub for enrichment. Sector: consumer. This profile is a lead awaiting the enrichment pipeline.'
+description: 'QwikCilver is India''s largest gift card and prepaid commerce company, founded in 2006 and
+  acquired by Pine Labs in 2019. It powers gift card issuance, distribution, and redemption for retailers,
+  banks, and enterprises, and operates the consumer and corporate gifting marketplace Woohoo (woohoo.in),
+  which sells digital and physical gift cards from 300+ brands. Its API platform (hosted on woohoo.in)
+  lets partners programmatically browse catalogs, place bulk gift card orders, activate and redeem cards,
+  check balances, and run reward, incentive, and channel-engagement programs. QwikCilver is an Accel
+  portfolio company in the consumer / fintech sector.'
 url: https://raw.githubusercontent.com/api-evangelist/qwikcilver/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -9,18 +14,72 @@ x-backed-by:
 - accel
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
+image: https://b2cstatic.woohoo.in/media/favicon/websites/2/Woohoo_Favicon_2.png
 tags:
 - Company
 - Consumer
-apis: []
+- Gift Cards
+- Prepaid
+- Payments
+- Fintech
+- Rewards
+- Corporate Gifting
+- India
+apis:
+- name: Woohoo Gift Card API
+  description: 'QwikCilver / Woohoo gift card and prepaid commerce API for browsing brand catalogs,
+    placing gift card orders, activating and redeeming cards, checking balances, and running reward
+    programs. OAuth2 client-credentials plus HMAC request signing; sandbox and production hosts on
+    woohoo.in.'
+  humanURL: https://developer.qwikcilver.in
+  baseURL: https://api.woohoo.in
+  tags:
+  - Gift Cards
+  - Prepaid
+  - Payments
+  properties:
+  - type: Sandbox
+    url: https://sandbox.woohoo.in
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-20'
+  status: minimal
+  artifacts_added: 2
+  pass: local-v1
 common:
+- type: DomainSecurity
+  url: security/qwikcilver-domain-security.yml
+- type: WellKnown
+  url: well-known/qwikcilver-well-known.yml
 - type: Website
-  url: http://www.qwikcilver.com
+  url: https://www.woohoo.in
+- type: DeveloperPortal
+  url: https://developer.qwikcilver.in
+- type: Blog
+  url: https://blog.woohoo.in/
+- type: Support
+  url: https://woohoo.in/contact
+- type: HelpCenter
+  url: https://woohoo.in/faq
+- type: TermsOfService
+  url: https://woohoo.in/termsofuse
+- type: PrivacyPolicy
+  url: https://woohoo.in/privacy

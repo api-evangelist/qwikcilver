@@ -1,0 +1,47 @@
+generated: '2026-07-20'
+method: searched
+source: live probes of /.well-known/* on apis.yml + API hosts
+notes: >-
+  QwikCilver / Woohoo API hosts (api.woohoo.in, sandbox.woohoo.in) sit behind
+  CloudFront and return HTTP 403 to unauthenticated /.well-known/* requests, so
+  no discovery documents could be captured. The marketing host (www.woohoo.in)
+  returns 404 for every probed path. No security.txt, OpenID/OAuth discovery,
+  api-catalog, or ai-plugin document is published.
+hosts:
+- host: https://api.woohoo.in
+  documents:
+  - path: /.well-known/security.txt
+    status: 403
+  - path: /.well-known/openid-configuration
+    status: 403
+  - path: /.well-known/oauth-authorization-server
+    status: 403
+  - path: /.well-known/api-catalog
+    status: 403
+  - path: /.well-known/ai-plugin.json
+    status: 403
+- host: https://sandbox.woohoo.in
+  documents:
+  - path: /.well-known/security.txt
+    status: 403
+  - path: /.well-known/openid-configuration
+    status: 403
+  - path: /.well-known/oauth-authorization-server
+    status: 403
+  - path: /.well-known/api-catalog
+    status: 403
+  - path: /.well-known/ai-plugin.json
+    status: 403
+- host: https://www.woohoo.in
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+documents: []
